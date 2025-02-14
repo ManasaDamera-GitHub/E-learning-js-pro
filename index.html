@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body id="one">
+    <header style="display: flex; justify-content: space-between;">
+        <a href="../index.html">Eduvera</a>
+
+        <input type="text" id="searchBar" placeholder="Search by name...">
+        <ul id="result"></ul>
+        <div class="subh-1" style="display: flex; gap: 20px;">
+            <nav><a href="#one">HOME</a></nav>
+            <nav><a href="#two">About</a></nav>
+            <nav><a href="#three">Course</a></nav>
+            <div class="dropdown-container">
+                <p id="pages">Pages </p>
+                <div class="dropdown" id="dropdownMenu">
+                    <a href="#">Pricing</a>
+                    <a href="#">Career</a>
+                    <a href="#">Teacher</a>
+                </div>
+            </div>
+            <nav><a href="#contact">Contact Us</a></nav>
+        </div>
+        <button onclick="login()">login</button>
+    </header>
+    <!-- <div class="dropdown"></div> -->
+    <div id="cont1"></div>
+    <div id="cont2">
+        <div style="display: flex; flex-direction: column;" id="two">
+            <p><b>ABOUT US</b></p>
+            <h3>Inspiring Growth, Transforming Lives</h3>
+            <p>Discover a world of knowledge with our expert-led online courses.
+                We empower learners with flexible, high-quality education to achieve their personal and professional
+                goals.
+            </p>
+            <p class="clk">
+                <i class="fa-sharp fa-solid fa-clock"></i>Engaging Content<br>
+                <i class="fa-sharp fa-solid fa-clock"></i>Flexible Learning<br>
+                <i class="fa-sharp fa-solid fa-clock"></i>Proven Success<br>
+                <i class="fa-sharp fa-solid fa-clock"></i>Future-Ready Skills<br>
+            </p>
+        </div>
+        <div><img src="./img6.jpg">
+            <img src="./img3.avif" alt="students">
+        </div>
+    </div>
+    <div id="cont3">
+        <p id="three">Popular Categories</p>
+        <p>Explore Our Top Learning Subjects</p>
+        <p>Expand your knowledge with our most sought-after courses.</p>
+        <div id="Subjects">
+            <div>
+                <p>Mathematics</p>
+                <p>Master numbers and formulas with engaging lessons designed to boost your problem-solving skills.</p>
+            </div>
+            <div>
+                <p>Chemistry</p>
+                <p>Unravel the mysteries of matter, reactions, and scientific principles with interactive learning.</p>
+            </div>
+            <div>
+                <p>English</p>
+                <p>Enhance your communication skills with expert-led courses in grammar, writing, and fluency.</p>
+            </div>
+            <div>
+                <p>Geography</p>
+                <p>Understand the world around you through detailed studies of landforms, climates, and global systems.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="bg">
+        <div class="course">
+            <div class="col">
+                <div class="row">
+                    <h3>Courses</h3>
+                    <h2>Comprehensive Course for Every Learner</h2>
+                </div>
+                <div>
+                    <p>Our courses are designed to cater to all skill levels, providing in-depth knowledge and practical
+                        learning experiences. Whether you're a beginner or an expert, you'll find the right course to
+                        enhance your skills and achieve your goals.</p>
+                    <button id="get" class="get">DISCOVER MORE</button>
+                </div>
+            </div>
+
+            <div id="cors">
+                <div id="cor1">
+                    <img src="./ds-cor3.jpg">
+                    <p>Data Science</p>
+                    <p>Master data analysis, visualization, and machine learning with Python</p>
+                    <p class="get">GET STARTED ></p>
+                </div>
+                <div id="cor1">
+                    <img src="./cor1.jpeg">
+                    <p>HTML5 & CSS3 Modern Web Development Course</p>
+                    <p>Build modern, responsive websites with HTML5 and CSS3.</p>
+                    <p class="get">GET STARTED ></p>
+                </div>
+                <div id="cor1">
+                    <img src="./cor2.jpg">
+                    <p>JavaScript: The Complete Guide (Beginner + Advanced)</p>
+
+                    <p>A comprehensive JavaScript course covering everything from basic syntax to advanced topics</p>
+                    <p class="get">GET STARTED ></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="contact">
+        <p>CONTACT US</p>
+        <p>Prepared to Start Your Journey? Let's Discuss!</p>
+        <input type="email" placeholder="Email Address">
+        <button class="get" id="get">GET STARTED</button>
+    </div>
+    <div class="Testimonial">
+        <p>Testimonial</p>
+        <h2>What our learners Say</h2>
+        <div id="test">
+            <div><img src="./img5.jpg"></div>
+            <div id="users">
+                <div>
+                    <p>"This course was exactly what I needed! The lessons were clear, engaging, and easy to follow. The
+                        hands-on exercises helped me build confidence in my skills. Highly recommended!"</p>
+                    <div><img src="img3.avif" alt="">
+                        <p>Priya Sharma</p>
+                    </div>
+                </div>
+                <div>
+                    <p>"The best online course I’ve taken! The instructor explains concepts in a way that makes them
+                        easy to understand. Plus, the support from the community was amazing."</p>
+                    <div><img src="./img4.jpg" alt="">
+                        <p>Rahul</p>
+                    </div>
+                </div>
+                <div>
+                    <p>"I had no prior experience, but this course made learning so simple. The step-by-step approach
+                        and real-world examples made all the difference. I now feel job-ready!"</p>
+                    <div><img src="./img3.avif" alt="">
+                        <p>Ananya</p>
+                    </div>
+                </div>
+
+                <div>
+                    <p>"A game-changer! This course helped me upskill and land a better job. The interactive content
+                        kept me engaged, and I loved how practical the assignments were."</p>
+                    <div><img src="./img4.jpg" alt="">
+                        <p>Arjun</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="blog">
+        <p>Blog Post</p>
+        <h2>Read Our Latest News and Articles</h2>
+        <p>"Stay updated with our latest news and insightful articles! Explore trending topics, expert opinions, and
+            valuable tips to enhance your knowledge. Whether it's the newest tech innovations, career growth
+            strategies,
+            or industry trends, we've got you covered. Keep learning and stay ahead!"</p>
+
+        <div id="container" class="grid-container">
+
+            <div class="div2"></div>
+        </div>
+    </div>
+    <footer>
+        <div class="icons">
+            <div class="foot">
+                <p> <img src="" alt="">Eduvera</p>
+                <div class="icon-container">
+                    <i class="fas fa-phone"></i> +123-456-7890<br>
+                    <i class="fas fa-envelope"></i> hello@reallygreatsite.com<br>
+                    <i class="fas fa-map-marker-alt"></i> 123 Anywhere St., Any City, ST 12345
+                </div>
+                <div class="icons-container" style="font-size: 2rem;">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="end">
+                <input type="text" placeholder="Email Address">
+                <button type="submit" class="get">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="links-bottom">
+            <div>
+                <h3>Quick Links</h3>
+                <p>Home<br>
+                    About<br>
+                    Services<br>
+                    Contact us<br>
+                    FAQ's</p>
+            </div>
+            <div>
+                <h3>Useful Links</h3>
+                <p>Privacy Policy<br>
+                    Terms & Conditions<br>
+                    Disclaimer<br>
+                    Support<br>
+                    Help Center</p>
+            </div>
+            <div>
+                <h3>Working Hours</h3>
+                <p>Monday - Friday<br>
+                    9AM - 3 PM<br><br>
+                    Weekend<br>
+                    Closed</p>
+            </div>
+
+        </div>
+
+    </footer>
+    <script src="https://kit.fontawesome.com/YOUR_KIT_CODE.js" crossorigin="anonymous"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>

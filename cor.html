@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown List Example</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .dropdown-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Dropdown styling */
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            min-width: 120px;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 8px;
+            text-decoration: none;
+            color: black;
+        }
+
+        .dropdown a:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="dropdown-container">
+        <p id="pages">Pages ⏷</p>
+        <div class="dropdown" id="dropdownMenu">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const pages = document.getElementById("pages");
+            const dropdown = document.getElementById("dropdownMenu");
+
+            pages.addEventListener("mouseover", function (event) {
+                dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+                event.stopPropagation(); // Prevent click from closing immediately
+            });
+
+            document.addEventListener("mouseover", function () {
+                dropdown.style.display = "none"; // Hide dropdown when clicking outside
+            });
+
+            dropdown.addEventListener("mouseover", function (event) {
+                event.stopPropagation(); // Keep dropdown open when clicking inside
+            });
+        });
+    </script>
+
+</body>
+
+</html>

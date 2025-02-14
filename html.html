@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML COURSE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Karma:wght@300;400;500;600;700&family=Pacifico&family=Playwrite+CZ:wght@100..400&display=swap"
+        rel="stylesheet">
+    <style>
+        /* Import Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@300;500&family=Open+Sans:wght@400;600&display=swap');
+
+        /* Global Styles */
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, #ecf0f3, #dfe6e9);
+            color: #333;
+            padding: 20px;
+            max-width: 900px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        /* Heading 1 - Main Title */
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 30px;
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 4px solid #3498db;
+            padding-bottom: 12px;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Heading 2 - Section Titles */
+        h2 {
+            font-family: 'Roboto', sans-serif;
+            font-size: 24px;
+            color: #e74c3c;
+            margin-top: 25px;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        /* Paragraph Styles */
+        p {
+            font-size: 17px;
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: 0.3s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        /* Bold Text Styling */
+        b {
+            color: #d35400;
+            font-weight: bold;
+        }
+
+        /* Hover Effect for Paragraphs */
+        p:hover {
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 22px;
+            }
+
+            p {
+                font-size: 15px;
+            }
+        }
+
+        /* Course Container */
+        .course-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        /* Stylish cursive font for the course container paragraph */
+        .course-container p {
+            font-family: 'Pacifico', cursive;
+            font-size: 20px;
+            color: #333;
+            text-align: center;
+            margin: 0;
+        }
+
+        /* Elegant serif font for the buy button */
+        .course-container .buy-btn {
+            font-family: 'Karma', serif;
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+
+        .course-container .buy-btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+
+        /* Additional Spacing and Alignment */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button onclick="access()">Quize</button>
+        <button onclick="access()">Assignments</button>
+        <button onclick="access()">Asssesment</button>
+    </header>
+    <h1>Introduction to HTML</h1>
+    <p>
+        HTML (HyperText Markup Language) is the standard markup language used to create and structure content on the
+        web. It forms the backbone of any website, allowing developers to define the structure of web pages using a
+        system of tags and attributes. HTML is not a programming language; rather, it is a markup language that
+        describes how content should be displayed in a web browser.<br>
+        HTML documents are made up of elements, which are represented by tags. These tags are enclosed in angle brackets
+        (<>) and usually come in pairs: an opening tag (<tag>) and a closing tag (</tag>). Some tags are self-closing
+            and do not require a closing tag.
+            In this guide, we’ll explore HTML tags categorized by their purpose and functionality.
+    </p>
+    <h2>Why Learn HTML?</h2>
+    <p>Learning HTML is essential for various practical reasons:</p>
+    <p><b>Foundation of Web Development:</b> HTML is the starting point for creating websites. Understanding HTML is
+        crucial
+        for any web development or web design role.<br>
+        <b>Universal Language of the Web:</b> HTML is the standard markup language used to create the structure of web
+        pages.
+        Knowledge of HTML is necessary to manage any content on the Internet.<br>
+        <b> Easy to Learn:</b> HTML is straightforward compared to programming languages. Beginners can quickly learn
+        how to
+        create basic websites with just HTML.<br>
+        <b> Career Opportunities: </b>Proficiency in HTML opens up various career paths, including web developer,
+        content
+        manager, and UX/UI designer roles.<br>
+        <b>Gateway to Advanced Technologies:</b> Once you master HTML, you can easily move on to learn CSS, JavaScript,
+        and
+        other tools that enhance websites, making them more interactive and visually appealing.
+    </p>
+    <div class="course-container">
+        <p>"Your journey to expertise starts here. Secure your spot in this course now!"</p>
+        <button class="buy-btn" onclick="course()">BUY NOW</button>
+    </div>
+
+    <script>
+        function course() {
+            let confirmPurchase = confirm("Are you sure you want to buy this course?");
+
+            if (confirmPurchase) {
+                alert("Thank you for your interest! Redirecting to payment...");
+                window.location.href = ""; // Add your payment link here
+            } else {
+                alert("No worries! You can enroll anytime.");
+            }
+        }
+        function access() {
+            let confirmAccess = confirm("Are you sure");
+            if (confirmAccess) {
+                window.location.href = "./filter.html";
+            } else {
+                alert("Plase BUY the course to access the content")
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
