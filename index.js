@@ -1,13 +1,20 @@
-function landingPage() {
-    let container = document.getElementById("cont1");
-    container.innerHTML = `
-<div><p>Welcome to E-learning</p>
-<h3>"Unlock Your Potential with Engaging, Expert-Guided Online Learning."</h3>
-<p>"Online courses turn your curiosity into capability—learn anytime, anywhere, and grow beyond limits."</p></div>
-<div><img src="https://pngimg.com/uploads/student/student_PNG62538.png" width='50%'></div>`
-    cont1.appendChiled(container);
+// for background image
+window.addEventListener("scroll", function () {
+    const cont1 = document.getElementById("cont1");
+    const body = document.body;
 
-}
+    // Get the height of #cont1
+    const cont1Height = cont1.offsetHeight;
+
+    // Check if the user has scrolled past #cont1
+    if (window.scrollY > cont1Height) {
+        body.style.backgroundImage = "none"; // Remove background image
+    } else {
+        body.style.backgroundImage = 'url("./img7.jpg")'; // Restore background image
+    }
+});
+
+
 const searchBar = document.getElementById('searchBar');
 const resultList = document.getElementById('result');
 const container = document.getElementById("container");

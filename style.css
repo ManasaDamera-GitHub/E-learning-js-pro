@@ -4,18 +4,25 @@
     box-sizing: border-box;
 }
 
-/* General Styles  */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Apply background image to the body */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: #333;
+    background-image: url("./img7.jpg");
+    /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* Ensures the background image stays fixed */
 }
 
-html {
-    scroll-behavior: smooth;
-}
 
 a {
     text-decoration: none;
@@ -104,20 +111,49 @@ header p:hover {
     box-shadow: 0 0 10px rgba(255, 107, 107, 0.5);
 }
 
-
-/* Hero Section */
+/* Make #cont1 take up the full viewport height */
 #cont1 {
+    height: 100vh;
+    /* Full viewport height */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 50px;
-    background: linear-gradient(135deg, #007BFF, #00BFFF);
     color: white;
+    position: relative;
+    /* Required for z-index */
+    z-index: 1;
+    /* Ensures content is above the background */
+    text-align: center;
 }
 
-#cont1 img {
-    width: 50%;
-    max-width: 500px;
+/* Add a semi-transparent overlay to #cont1 */
+#cont1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black overlay */
+    z-index: -1;
+    /* Places the overlay behind the content */
+
+}
+
+/* Ensure other containers have a solid background */
+#cont2,
+#cont3,
+#contact,
+.Testimonial,
+#blog,
+footer {
+    background-color: #f9f9f9;
+    /* Solid background for other sections */
+    position: relative;
+    z-index: 2;
+    /* Ensures these sections are above the background */
 }
 
 #cont1 h3 {
@@ -130,7 +166,113 @@ header p:hover {
     margin-bottom: 20px;
 }
 
-/* About Us Section */
+#cont1 h1 {
+    font-size: 3.5rem;
+    /* Large font size */
+    font-weight: bold;
+    /* Bold text */
+    color: #007BFF;
+    /* Blue color */
+    text-align: center;
+    /* Center align */
+    margin: 2rem 0;
+    /* Add some margin */
+    position: relative;
+    /* For pseudo-elements */
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(-50px);
+    /* Start slightly above */
+    animation: fadeInDown 1.5s ease-out 0.5s forwards;
+    /* Animation */
+}
+
+/* Keyframes for fadeInDown animation */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: Add a gradient underline effect */
+h1::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #007BFF, #00BFFF);
+    transform: translateX(-50%);
+    animation: underlineGrow 1s ease-out 2s forwards;
+    /* Animation */
+}
+
+/* Keyframes for underline animation */
+@keyframes underlineGrow {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 60px;
+    }
+}
+
+#cont1 h3 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(-20px);
+    /* Start slightly above */
+    animation: fadeInDown 1.2s ease-out 1.5s forwards;
+    /* Animation */
+}
+
+#cont1 p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(20px);
+    /* Start slightly below */
+    animation: fadeInUp 1.2s ease-out 2.5s forwards;
+    /* Animation */
+}
+
+/* Keyframes for h3 (fade in and move down) */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframes for p (fade in and move up) */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 #cont2 {
     display: flex;
     align-items: center;
@@ -145,6 +287,27 @@ header p:hover {
     width: 100%;
     max-width: 1500px;
     text-align: justify;
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateX(100%);
+    /* Start off-screen to the right */
+    animation: slideInLeft 1s ease-out 0.5s forwards;
+    /* Animation */
+}
+
+/* Keyframes for slideInLeft animation */
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+        /* Start off-screen to the right */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        /* Move to original position */
+    }
 }
 
 /* Text Content */
@@ -636,7 +799,7 @@ button#get:hover {
     padding: 50px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 80%;
+    width: 100%;
     margin: 50px auto;
 }
 
@@ -744,7 +907,7 @@ button#get:hover {
     padding: 50px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 90%;
+    width: 100%;
     margin: 50px auto;
     height: fit-content;
 }
