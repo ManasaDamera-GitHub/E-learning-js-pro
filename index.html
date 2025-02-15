@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -19,15 +20,15 @@
         <input type="text" id="searchBar" placeholder="Search by name...">
         <ul id="result"></ul>
         <div class="subh-1" style="display: flex; gap: 20px;">
-            <nav><a href="#one">HOME</a></nav>
+            <nav><a href="#one">Home</a></nav>
             <nav><a href="#two">About</a></nav>
             <nav><a href="#three">Course</a></nav>
             <div class="dropdown-container">
                 <p id="pages">Pages </p>
                 <div class="dropdown" id="dropdownMenu">
-                    <a href="#">Pricing</a>
-                    <a href="#">Career</a>
-                    <a href="#">Teacher</a>
+                    <a href="./pricing.html">Pricing</a>
+                    <a href="./career.html">Career</a>
+                    <a href="./teachers">Teacher</a>
                 </div>
             </div>
             <nav><a href="#contact">Contact Us</a></nav>
@@ -45,7 +46,7 @@
     <div id="cont2">
         <div style="display: flex; flex-direction: column;" id="two">
             <p><b>ABOUT US</b></p>
-            <h3>Inspiring Growth, Transforming Lives</h3>
+            <h3><i>Inspiring Growth, Transforming Lives</i></h3>
             <p>Discover a world of knowledge with our expert-led online courses.
                 We empower learners with flexible, high-quality education to achieve their personal and professional
                 goals.
@@ -67,20 +68,24 @@
         <p>Expand your knowledge with our most sought-after courses.</p>
         <div id="Subjects">
             <div>
+                <i class="fas fa-calculator"></i>
                 <p>Mathematics</p>
                 <p>Master numbers and formulas with engaging lessons designed to boost your problem-solving skills.</p>
             </div>
             <div>
-                <p>Chemistry</p>
-                <p>Unravel the mysteries of matter, reactions, and scientific principles with interactive learning.</p>
+                <i class="fas fa-flask"></i>
+                <p>Science</p>
+                <p>Discover the wonders of physics, chemistry, and biology</p>
             </div>
             <div>
-                <p>English</p>
-                <p>Enhance your communication skills with expert-led courses in grammar, writing, and fluency.</p>
+                <i class="fas fa-book"></i> <!-- Icon for Literature -->
+                <p>Literature</p>
+                <p>Dive into classic and modern literature from around the world.</p>
             </div>
             <div>
-                <p>Geography</p>
-                <p>Understand the world around you through detailed studies of landforms, climates, and global systems.
+                <i class="fas fa-chart-line"></i> <!-- Icon for Data Science -->
+                <p>Data Science</p>
+                <p>Master data analysis, machine learning, and visualization.</p>
                 </p>
             </div>
         </div>
@@ -93,29 +98,29 @@
                     <h2>Comprehensive Course for Every Learner</h2>
                 </div>
                 <div>
-                    <p>Our courses are designed to cater to all skill levels, providing in-depth knowledge and practical
+                    <p class="p">Our courses are designed to cater to all skill levels, providing in-depth knowledge and
+                        practical
                         learning experiences. Whether you're a beginner or an expert, you'll find the right course to
                         enhance your skills and achieve your goals.</p>
                     <button id="get" class="get">DISCOVER MORE</button>
                 </div>
             </div>
-
-            <div id="cors">
+            <div id="cors" class="hidden">
                 <div id="cor1">
                     <img src="./ds-cor3.jpg">
-                    <p>Data Science</p>
+                    <h3>Data Science</h3>
                     <p>Master data analysis, visualization, and machine learning with Python</p>
                     <p class="get">GET STARTED ></p>
                 </div>
                 <div id="cor1">
                     <img src="./cor1.jpeg">
-                    <p>HTML5 & CSS3 Modern Web Development Course</p>
+                    <h3>HTML5 & CSS3 Modern Web Development Course</h3>
                     <p>Build modern, responsive websites with HTML5 and CSS3.</p>
                     <p class="get">GET STARTED ></p>
                 </div>
                 <div id="cor1">
                     <img src="./cor2.jpg">
-                    <p>JavaScript: The Complete Guide (Beginner + Advanced)</p>
+                    <h3>JavaScript: The Complete Guide (Beginner + Advanced)</h3>
 
                     <p>A comprehensive JavaScript course covering everything from basic syntax to advanced topics</p>
                     <p class="get">GET STARTED ></p>
@@ -131,7 +136,7 @@
     </div>
     <div class="Testimonial">
         <p>Testimonial</p>
-        <h2>What our learners Say</h2>
+        <h2 class="typing-effect">What our learners Say</h2>
         <div id="test">
             <div><img src="./img5.jpg"></div>
             <div id="users">
@@ -170,7 +175,7 @@
     </div>
 
     <div id="blog">
-        <p>Blog Post</p>
+        <h1>Blog Post</h1>
         <h2>Read Our Latest News and Articles</h2>
         <p>"Stay updated with our latest news and insightful articles! Explore trending topics, expert opinions, and
             valuable tips to enhance your knowledge. Whether it's the newest tech innovations, career growth
@@ -178,7 +183,9 @@
             or industry trends, we've got you covered. Keep learning and stay ahead!"</p>
 
         <div id="container" class="grid-container">
-
+            <div id="loader">
+                <div class="spinner"></div>
+            </div>
             <div class="div2"></div>
         </div>
     </div>

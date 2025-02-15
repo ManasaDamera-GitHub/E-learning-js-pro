@@ -13,13 +13,36 @@ window.addEventListener("scroll", function () {
         body.style.backgroundImage = 'url("./img7.jpg")'; // Restore background image
     }
 });
+// conatiner 3
+document.addEventListener("DOMContentLoaded", function () {
+    const cont3 = document.querySelector("#cont3");
 
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    cont3.classList.add("show"); // Add the class when visible
+                }
+            });
+        },
+        { threshold: 0.3 } // Trigger when 30% of the element is visible
+    );
+
+    observer.observe(cont3);
+});
 
 const searchBar = document.getElementById('searchBar');
 const resultList = document.getElementById('result');
 const container = document.getElementById("container");
 
+
+
 async function fetchData() {
+    window.addEventListener('load', function () {
+        // Hide the loader when the page is fully loaded
+        const loader = document.getElementById('loader');
+        loader.style.display = 'none';
+    });
     // let response = await fetch("https://large-necessary-quesadilla.glitch.me/courses");
     let response = await fetch("https://harsh-hospitable-turnip.glitch.me/courses");
     let data = await response.json();
@@ -53,7 +76,7 @@ function displayData(data) {
             // `;
             item.innerHTML = `
          <img src="${obj.pic}" alt="${obj.title}" >
-        <p><strong>${obj.title}</strong></p>
+        <p style="color:#987070"><strong>${obj.title}</strong></p>
         <p class="get">READ MORE</p>
         `
             div2.appendChild(item);
@@ -90,22 +113,22 @@ document.querySelectorAll(".get").forEach(get => {
     });
 });
 // Dropdown content
-document.addEventListener("DOMContentLoaded", function () {
-    const pages = document.getElementById("pages");
-    const dropdown = document.getElementById("dropdownMenu");
+// document.addEventListener("DOMContentLoaded", function () {
+//     const pages = document.getElementById("pages");
+//     const dropdown = document.getElementById("dropdownMenu");
 
-    pages.addEventListener("click", function (event) {
-        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
-        event.stopPropagation();//prevent click from closing immediately
-    });
-    document.addEventListener("click", function () {
-        dropdown.style.display = "none";//hide dropdown when clicking outside
-    });
-    document.addEventListener("click", function (event) {
-        event.stopPropagation();//keep dropdown open when clicking inside
-    });
+//     pages.addEventListener("click", function (event) {
+//         dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+//         event.stopPropagation();//prevent click from closing immediately
+//     });
+//     document.addEventListener("click", function () {
+//         dropdown.style.display = "none";//hide dropdown when clicking outside
+//     });
+//     document.addEventListener("click", function (event) {
+//         event.stopPropagation();//keep dropdown open when clicking inside
+//     });
 
-})
+// })
 
 
 
