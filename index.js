@@ -103,15 +103,40 @@ searchBar.addEventListener("keyup", function () {
 });
 
 // Select all elements with class "get"
-document.querySelectorAll(".get").forEach(get => {
-    get.addEventListener("click", function () {
+document.querySelectorAll(".get").forEach(get =>
+    get.addEventListener("click", () => {
+        // Create a toast message element
+        const toast = document.createElement("div");
+        toast.textContent = "Please login...!";
+        toast.style.position = "fixed";
+        toast.style.top = "100px";
+        toast.style.right = "20px";
+        toast.style.backgroundColor = "#61605d";
+        toast.style.color = "#fff";
+        toast.style.padding = "10px 20px";
+        toast.style.borderRadius = "5px";
+        toast.style.boxShadow = "0 2px 10px rgba(0, 0, 0, 0.1)";
+        toast.style.zIndex = "1000";
+        toast.style.opacity = "0";
+        toast.style.transition = "opacity 0.5s ease";
 
-        alert("You're just one step away! Log in to unlock the full course.");
+        // Append the toast to the body
+        document.body.appendChild(toast);
 
-        // You can redirect the user to a course page or take other actions
-        // window.location.href = "course-details.html";  // Example redirect
-    });
-});
+        // Fade in the toast
+        setTimeout(() => {
+            toast.style.opacity = "1";
+        }, 100);
+
+        // Fade out and remove the toast after 3 seconds
+        setTimeout(() => {
+            toast.style.opacity = "0";
+            setTimeout(() => {
+                document.body.removeChild(toast);
+            }, 500); // Wait for the fade-out transition to complete
+        }, 3000);
+    })
+);
 // Dropdown content
 // document.addEventListener("DOMContentLoaded", function () {
 //     const pages = document.getElementById("pages");

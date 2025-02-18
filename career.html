@@ -183,6 +183,170 @@
         .dropdown-container:hover .dropdown {
             display: block;
         }
+
+
+
+
+
+
+        /* General Footer Styles */
+footer {
+    background-color: #022249; /* Dark blue background */
+    color: #ffffff; /* White text color */
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+.icons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.foot {
+    flex: 1 1 300px;
+}
+
+.foot p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.icon-container {
+    margin-bottom: 20px;
+}
+
+.icon-container i {
+    margin-right: 10px;
+    color: #ffffff;
+}
+
+.icons-container {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.icons-container i {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.icons-container i:hover {
+    color: #007bff; /* Blue color on hover */
+}
+
+.end {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.end input[type="text"] {
+    padding: 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    max-width: 300px;
+}
+
+.end .get {
+    padding: 12px 20px;
+    font-size: 1rem;
+    background-color: #007bff; /* Blue button */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.end .get:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.links-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 40px auto 0;
+}
+
+.links-bottom div {
+    flex: 1 1 200px;
+}
+
+.links-bottom h3 {
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+.links-bottom p {
+    line-height: 1.6;
+    color: #e0e0e0; /* Light gray for better readability */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .icons {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .end {
+        align-items: center;
+    }
+
+    .end input[type="text"] {
+        max-width: 100%;
+    }
+
+    .links-bottom {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .foot p {
+        font-size: 1.25rem;
+    }
+
+    .icon-container {
+        font-size: 0.9rem;
+    }
+
+    .icons-container {
+        font-size: 1.5rem;
+    }
+
+    .end input[type="text"] {
+        font-size: 0.9rem;
+    }
+
+    .end .get {
+        font-size: 0.9rem;
+    }
+
+    .links-bottom h3 {
+        font-size: 1.1rem;
+    }
+
+    .links-bottom p {
+        font-size: 0.9rem;
+    }
+}
     </style>
 </head>
 
@@ -208,6 +372,61 @@
         </div>
         <button onclick="login()">login</button>
     </header>
+
+
+
+
+
+
+
+    <footer>
+        <div class="icons">
+            <div class="foot">
+                <p> <img src="" alt="">Eduvera</p>
+                <div class="icon-container">
+                    <i class="fas fa-phone"></i> +123-456-7890<br>
+                    <i class="fas fa-envelope"></i> hello@reallygreatsite.com<br>
+                    <i class="fas fa-map-marker-alt"></i> 123 Anywhere St., Any City, ST 12345
+                </div>
+                <div class="icons-container" style="font-size: 2rem;">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-twitter"></i>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+            </div>
+            <div class="end">
+                <input type="text" placeholder="Email Address">
+                <button type="submit" class="get">SUBSCRIBE</button>
+            </div>
+        </div>
+        <div class="links-bottom">
+            <div>
+                <h3>Quick Links</h3>
+                <p>Home<br>
+                    About<br>
+                    Services<br>
+                    Contact us<br>
+                    FAQ's</p>
+            </div>
+            <div>
+                <h3>Useful Links</h3>
+                <p>Privacy Policy<br>
+                    Terms & Conditions<br>
+                    Disclaimer<br>
+                    Support<br>
+                    Help Center</p>
+            </div>
+            <div>
+                <h3>Working Hours</h3>
+                <p>Monday - Friday<br>
+                    9AM - 3 PM<br><br>
+                    Weekend<br>
+                    Closed</p>
+            </div>
+
+        </div>
+
+    </footer>
 </body>
 
 </html>
