@@ -24,10 +24,10 @@
             padding: 0;
             box-sizing: border-box;
             color: #333;
-            background-image: url("./img7.jpg");
+            background-image: url("./teach.jpg");
             /* Replace with your image path */
             background-size: cover;
-            background-position: center;
+            /* background-position: center; */
             background-attachment: fixed;
             /* Ensures the background image stays fixed */
         }
@@ -184,178 +184,352 @@
             display: block;
         }
 
+        .cont {
+            height: 100vh;
+            /* Full viewport height */
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            flex-direction: column;
+            padding: 50px;
+            color: white;
+            position: relative;
+            /* Required for z-index */
+            z-index: 1;
+            /* Ensures content is above the background */
+            text-align: start;
+        }
+
+        /* Add a semi-transparent overlay to #cont1 */
+        .cont::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent black overlay */
+            z-index: -1;
+            /* Places the overlay behind the content */
+
+        }
+
+        #main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .team p:first-child {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #0D4715;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .team h1 {
+            font-size: 36px;
+
+            margin-bottom: 20px;
+        }
 
 
+        #teach-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
+        #teach-container div {
+            background: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(50px);
+            animation: fade-slide-up 0.6s ease-out forwards;
+        }
 
+        #teach-container div:nth-child(1) {
+            animation-delay: 0.2s;
+        }
 
+        #teach-container div:nth-child(2) {
+            animation-delay: 0.4s;
+        }
 
+        #teach-container div:nth-child(3) {
+            animation-delay: 0.6s;
+        }
 
+        #teach-container div:nth-child(4) {
+            animation-delay: 0.8s;
+        }
 
+        #teach-container div:nth-child(5) {
+            animation-delay: 1s;
+        }
 
+        #teach-container div:nth-child(6) {
+            animation-delay: 1.2s;
+        }
 
+        @keyframes fade-slide-up {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
+        #teach-container div:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
 
+        #teach-container img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+            object-position: center;
+            border-bottom: 2px solid #eee;
+        }
 
+        #teach-container h1 {
+            font-size: 20px;
+            color: #222;
+            padding: 15px;
+            margin: 0;
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            #teach-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            #teach-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        h1.bounce-effect {
+            font-size: 36px;
+            color: #10591a;
+            animation: bounce-in 1s ease-out;
+        }
+
+        @keyframes bounce-in {
+            0% {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+
+            60% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .team h1 {
+                font-size: 28px;
+            }
+
+            #teach-container {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+        }
+
+        @media (max-width: 480px) {
+            .team h1 {
+                font-size: 24px;
+            }
+
+            #teach-container {
+                grid-template-columns: 1fr;
+            }
+        }
 
         /* General Footer Styles */
-footer {
-    background-color: #022249; /* Dark blue background */
-    color: #ffffff; /* White text color */
-    padding: 40px 20px;
-    font-family: Arial, sans-serif;
-}
+        footer {
+            background-color: #022249;
+            /* Dark blue background */
+            color: #ffffff;
+            /* White text color */
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+        }
 
-.icons {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        .icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.foot {
-    flex: 1 1 300px;
-}
+        .foot {
+            flex: 1 1 300px;
+        }
 
-.foot p {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
+        .foot p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
 
-.icon-container {
-    margin-bottom: 20px;
-}
+        .icon-container {
+            margin-bottom: 20px;
+        }
 
-.icon-container i {
-    margin-right: 10px;
-    color: #ffffff;
-}
+        .icon-container i {
+            margin-right: 10px;
+            color: #ffffff;
+        }
 
-.icons-container {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-}
+        .icons-container {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
 
-.icons-container i {
-    color: #ffffff;
-    transition: color 0.3s ease;
-}
+        .icons-container i {
+            color: #ffffff;
+            transition: color 0.3s ease;
+        }
 
-.icons-container i:hover {
-    color: #007bff; /* Blue color on hover */
-}
+        .icons-container i:hover {
+            color: #007bff;
+            /* Blue color on hover */
+        }
 
-.end {
-    flex: 1 1 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
+        .end {
+            flex: 1 1 300px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
 
-.end input[type="text"] {
-    padding: 12px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    width: 100%;
-    max-width: 300px;
-}
+        .end input[type="text"] {
+            padding: 12px;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            width: 100%;
+        }
 
-.end .get {
-    padding: 12px 20px;
-    font-size: 1rem;
-    background-color: #007bff; /* Blue button */
-    color: #ffffff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+        .end .get {
+            padding: 12px 20px;
+            font-size: 1rem;
+            background-color: #007bff;
+            /* Blue button */
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 30%;
+        }
 
-.end .get:hover {
-    background-color: #0056b3; /* Darker blue on hover */
-}
+        .end .get:hover {
+            background-color: #0056b3;
+            /* Darker blue on hover */
+        }
 
-.links-bottom {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    max-width: 1200px;
-    margin: 40px auto 0;
-}
+        .links-bottom {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+            max-width: 1200px;
+            margin: 40px auto 0;
+        }
 
-.links-bottom div {
-    flex: 1 1 200px;
-}
+        .links-bottom div {
+            flex: 1 1 200px;
+        }
 
-.links-bottom h3 {
-    font-size: 1.25rem;
-    margin-bottom: 15px;
-}
+        .links-bottom h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+        }
 
-.links-bottom p {
-    line-height: 1.6;
-    color: #e0e0e0; /* Light gray for better readability */
-}
+        .links-bottom p {
+            line-height: 1.6;
+            color: #e0e0e0;
+            /* Light gray for better readability */
+        }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .icons {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .icons {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
 
-    .end {
-        align-items: center;
-    }
+            .end {
+                align-items: center;
+            }
 
-    .end input[type="text"] {
-        max-width: 100%;
-    }
+            .end input[type="text"] {
+                max-width: 100%;
+            }
 
-    .links-bottom {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-}
+            .links-bottom {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+        }
 
-@media (max-width: 480px) {
-    .foot p {
-        font-size: 1.25rem;
-    }
+        @media (max-width: 480px) {
+            .foot p {
+                font-size: 1.25rem;
+            }
 
-    .icon-container {
-        font-size: 0.9rem;
-    }
+            .icon-container {
+                font-size: 0.9rem;
+            }
 
-    .icons-container {
-        font-size: 1.5rem;
-    }
+            .icons-container {
+                font-size: 1.5rem;
+            }
 
-    .end input[type="text"] {
-        font-size: 0.9rem;
-    }
+            .end input[type="text"] {
+                font-size: 0.9rem;
+            }
 
-    .end .get {
-        font-size: 0.9rem;
-    }
+            .end .get {
+                font-size: 0.9rem;
+            }
 
-    .links-bottom h3 {
-        font-size: 1.1rem;
-    }
+            .links-bottom h3 {
+                font-size: 1.1rem;
+            }
 
-    .links-bottom p {
-        font-size: 0.9rem;
-    }
-}
+            .links-bottom p {
+                font-size: 0.9rem;
+            }
+        }
     </style>
 </head>
 
@@ -381,7 +555,24 @@ footer {
         </div>
         <button onclick="login()">login</button>
     </header>
+    <div class="cont" id="cont">
+        <h1>Teacher</h1>
+        <p>HOME > About</p>
+    </div>
 
+    <div id="main-container">
+        <div class="team">
+            <p>TEAM</p>
+            <h1 class="bounce-effect">Meet Our Expert Instructors</h1>
+            <p>Our skilled instructors bring years of experience and a passion for teaching to help you achieve your
+                goals. With personalized guidance and practical insights, they’re here to support your learning journey
+                every step of the way. Learn from the best and unlock your potential!</p>
+        </div>
+
+        <div id="teach-container">
+
+        </div>
+    </div>
 
 
 
@@ -436,6 +627,51 @@ footer {
         </div>
 
     </footer>
+
+    <script>
+        // for background image
+        window.addEventListener("scroll", function () {
+            const cont = document.getElementById("cont");
+            const body = document.body;
+
+            // Get the height of #cont1
+            const contHeight = cont.offsetHeight;
+
+            // Check if the user has scrolled past #cont1
+            if (window.scrollY > contHeight) {
+                body.style.backgroundImage = "none"; // Remove background image
+            } else {
+                body.style.backgroundImage = 'url("./teach.jpg")'; // Restore background image
+            }
+        });
+
+        async function getdata() {
+            try {
+                let response = await fetch("https://metal-tremendous-pantydraco.glitch.me/teachers");
+                if (response.ok) {
+                    let data = await response.json()
+                    display(data);
+                    console.log(data)
+                }
+            } catch (error) {
+                console.error(error);
+            }
+
+        }
+        function display(data) {
+            let container = document.getElementById("teach-container");
+            data.forEach(obj => {
+                let item = document.createElement("div");
+                item.innerHTML = `
+                <img src="${obj.image}">
+                <h1>${obj.name}</h1>
+                `
+                container.appendChild(item);
+            })
+        }
+
+        getdata()
+    </script>
 </body>
 
 </html>
