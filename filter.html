@@ -8,25 +8,46 @@
     <link rel="stylesheet" href="./filter.css">
     <!-- <link rel="stylesheet" href="./dark/light.css"> -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
     <header>
-        <input type="text" id="searchBar" placeholder="Search by name...">
+        <input type="text" id="searchBar" placeholder="Search by Course name...">
         <ul id="result"></ul>
+        <nav class="navbar">
+            <a href="./html.html">HTML</a>
+            <a href="./css.html">CSS</a>
+            <a href="./javascript.html">JavaScript</a>
+            <a href="./python.html">PYTHON</a>
+            <a href="fav.html" id="favourites-link">My Favourites</a>
+            <a href="cart.html" id="cart-link">My Course</a>
+        </nav>
         <div class="toggle-container">
             <button id="theme-toggle"><i class="fas fa-sun"></i></button>
         </div>
+        <div class="dropdown-container">
+            <button class="btn user-btn"><i class="far fa-user"></i></button>
+            <div class="dropdown" id="dropdownMenu">
+                <a href="./profile.html">My Profile</a>
+                <a href="cart.html" id="cart-link">My Course</a>
+                <a href="./leaderbrd">LeaderBoard</a>
+                <a href="./index.html">LogOut</a>
+            </div>
+        </div>
     </header>
-    <div class="nav-links">
-        <a href="./html.html">HTML</a>
-        <a href="./css.html">CSS</a>
-        <a href="./javascript.html">javascript</a>
-        <a href="./python.html">PYTHON</a>
-        <!-- <a href="./"></a> -->
-        <!-- <a href=""></a> -->
+    <div class="home">
+        <h1>Hello, What Do You Want To Learn?</h1>
+        <div class="search-container">
+            <button id="textButton" class="typewriter-button"></button>
+            <i class="fas fa-search fa-lg" style="font-size: 24px; color: #007bff;"></i>
+        </div>
+
     </div>
+
     <div id="loader" class="loader"></div> <!-- Loader added here -->
     <div id="container" class="grid-container">
         <div id="container" class="grid-container">

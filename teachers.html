@@ -215,6 +215,65 @@
 
         }
 
+        .cont h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .cont p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .cont h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            opacity: 0;
+            /* Initially hidden */
+            transform: translateY(-20px);
+            /* Start slightly above */
+            animation: fadeInDown 1.2s ease-out 1.5s forwards;
+            /* Animation */
+        }
+
+        .cont p {
+            font-size: 18px;
+            margin-bottom: 20px;
+            opacity: 0;
+            /* Initially hidden */
+            transform: translateY(20px);
+            /* Start slightly below */
+            animation: fadeInUp 1.2s ease-out 2.5s forwards;
+            /* Animation */
+            text-align: left;
+        }
+
+        /* Keyframes for h3 (fade in and move down) */
+        @keyframes fadeInDown {
+            0% {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Keyframes for p (fade in and move up) */
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         #main-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -540,9 +599,9 @@
         <input type="text" id="searchBar" placeholder="Search by name...">
         <ul id="result"></ul>
         <div class="subh-1" style="display: flex; gap: 20px;">
-            <nav><a href="#one">Home</a></nav>
-            <nav><a href="#two">About</a></nav>
-            <nav><a href="#three">Course</a></nav>
+            <nav><a href="./index.html">Home</a></nav>
+            <nav><a href="./index.html">About</a></nav>
+            <nav><a href="./index.html">Course</a></nav>
             <div class="dropdown-container">
                 <p id="pages">Pages </p>
                 <div class="dropdown" id="dropdownMenu">
