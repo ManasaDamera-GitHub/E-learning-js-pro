@@ -1,14 +1,18 @@
-General Styles * {
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Georgia', serif;
 }
-
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f9f9f9;
+    /* font-family: 'Poppins', sans-serif; */
+    background: linear-gradient(135deg, #E8F9FF, #C4D9FF); /* Gradient from #666 to #333 */
     color: #333;
     line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Ensure the gradient covers the full viewport height */
 }
 
 a {
@@ -18,7 +22,7 @@ a {
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    background: linear-gradient(135deg, #A6B37D, #134B70);
     color: white;
     padding: 2rem;
     text-align: center;
@@ -31,9 +35,11 @@ header h1 {
     animation: fadeIn 1s ease-in-out;
 }
 
-header p {
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
+.p {
+    font-size: 1.5rem;
+    margin-top: 2.5rem;
+    text-align: center;
+    font-style: italic;
     animation: fadeIn 1.5s ease-in-out;
 }
 
@@ -56,14 +62,14 @@ main {
     margin: 0 auto;
 }
 
-/* Favourites Container */
+/* Favorites Container */
 #favourites-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
-/* Favourite Item */
+/* Favorite Item */
 .favourite-item {
     background: white;
     border-radius: 10px;
